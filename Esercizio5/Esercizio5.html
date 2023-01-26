@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio5</title>
+</head>
+<body>
+    ESERCIZIO 1
+ Scrivi una funzione chiamata "area" che riceve due parametri (l1, l2) e calcola l'area del rettangolo associato.
+
+
+	    <h1>Calcolo dell'area di un rettangolo</h1>
+	    <label>Base:</label>
+	    <input type="text" id="base"><br>
+	    <label>Altezza:</label>
+	    <input type="text" id="altezza"><br>
+	    <input type="button" onclick="area()" value="Calcola l'area"><br>
+	    <label>Area:</label>
+	    <input type="text" id="area">
+ <script>
+    function area() {
+        var b = document.getElementById("base").value;
+        var h = document.getElementById("altezza").value;
+        var A = b * h;
+        document.getElementById("area").value = A;
+    }
+    
+</script>
+
+ESERCIZIO 2
+ Scrivi una funzione chiamata "crazySum" che riceve due numeri interi come parametri.
+ La funzione deve ritornare la somma di quei due valori, ma se il loro valore è lo stesso allora deve ritornare la loro somma moltiplicata per 3.
+ <script>
+     function crazySum (num1, num2) {
+    
+        if (num1 !== num2) {
+        return sum = num1 + num2;
+     
+    } else {
+        return sum = (num1 + num2) *3;
+    }}
+     console.log(crazySum(2,2));
+ </script>
+
+ESERCIZIO 3
+Scrivi una funzione chiamata "crazyDiff" che calcola la differenza assoluta tra un numero fornito e 19.
+Se il valore calcolato è più grande di 19, la funzione deve tornare tale risultato moltiplicato per 3.
+
+<script>
+    
+
+
+     function crazyDiff (num1, num2) {
+        if (num1 - num2 <= 19){
+        return diff = num1 - num2;
+     } else (num1 - num2 > 19);
+     return diff = (num1 - num2) * 3;
+    }
+
+    console.log(crazyDiff(25,1))
+ 
+</script>
+
+ESERCIZIO 4
+ Scrivi una funzione chiamata "boundary", che accetta un numero intero come parametro e ritorna true se tale parametro è incluso tra 20 e 100 (incluso) o se è esattamente uguale a 400.
+
+ <script>
+    function boundary (num1) {
+        if ((num1 >= 20 && num1 <= 100) || (num1 === 400)) {
+        return true 
+    } else 
+    {
+        return false;
+    }
+}
+    console.log(boundary(200));
+ </script>
+
+ESERCIZIO 5
+Scrivi una funzione chiamata "codify" che accetta una stringa come parametro.
+La funzione deve aggiungere la parola "code" all'inizio della stringa fornita e ritornare il risultato, ma se la stringa fornita comincia proprio con "code" allora deve ritornarla senza modifiche.
+<script>
+
+    const codify = function(str) {
+        if (str.startsWith('code')){
+            return str;
+        } else {
+            return 'code' + str;
+        }
+    }
+    
+    console.log(codify('codes'));
+    
+</script>
+
+ESERCIZIO 6
+ Scrivi una funzione chiamata "check3and7" la quale accetta un numero intero positivo come parametro.
+ La funzione deve controllare che tale parametro sia un multiplo di 3 o di 7, e in tal caso tornare true; altrimenti deve tornare false.
+ SUGGERIMENTO: operatore modulo
+
+ <script>
+    function check3and7 (num1) {
+        if (num1  % 3 === 0 || num1 % 7 === 0) {
+        return true
+    } else {
+        return false
+    }
+}
+
+console.log(check3and7(10))
+ </script>
+
+ESERCIZIO 7
+ Scrivi una funzione chiamata "reverseString", che accetta una stringa come parametro e la ritorna invertita (es.: EPICODE => EDOCIPE).
+
+ <script>
+    function reverseString(str) {
+    return str.split('').reverse().join('');
+}
+
+console.log(reverseString('Elisa'));    
+ </script>
+
+ESERCIZIO 8
+Scrivi una funzione chiamata "upperFirst", che accetta una stringa come parametro e la ritorna rendendo maiuscola ogni lettera iniziale di ogni parola.
+<script>
+
+    const upperFirstPhrase = function(str){
+        let words = str.split('')
+let finalString = []
+for (let i = 0; i < words.lenght; i++){
+    let firstChar = words[i].charAt(0)
+    console.log(firstChar)
+    let uppercaseChar = firstChar.toUpperCase()
+    let cutString = words[i].slice(1)
+    let finalWord = uppercaseChar + cutString
+    finalString.push(finalWord)
+} console.log(finalString.join(""))
+    }
+ upperFirstPhrase("hello world")
+</script>
+
+ESERCIZIO 9
+ Scrivi una funzione chiamata "cutString", che accetta una stringa come parametro e la ritorna senza il primo e l'ultimo carattere.
+ <script>
+const cutString = function(str) {
+    return str.slice(1, str.lenght, -1)
+}
+console.log(cutString("Ciao"))
+ </script>
+
+ESERCIZIO 10
+Scrivi una funzione chiamata "giveMeRandom", che accetta come parametro un numero chiamato n e ritorna un array contenente n numeri random contenuti tra 0 e 10.
+<script>
+    const giveMeRandom = function(n){
+        const arr = [];
+        for(let c = 0; c <= n; c++) {
+            arr.push(Math.floor(Math.random() * 10))
+        }
+        return arr
+    }
+    console.log(giveMeRandom);
+</script>
+</body>
+</html>
